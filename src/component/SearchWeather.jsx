@@ -10,7 +10,7 @@ const Searchweather = () => {
       Search button is pressed. Make a fetch call to the Open Weather Map API.
     */
     const searchPressed = () => {
-      fetch("https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=b9519c2b3dbbb291ab2627137e800ba9")
+      fetch(`https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=b9519c2b3dbbb291ab2627137e800ba9`)
         .then((res) => res.json())
         .then((result) => {
           setWeather(result);
